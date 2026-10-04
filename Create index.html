@@ -1,243 +1,90 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-Hant">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI與經濟研究報告專題 - 技能偏向型技術變遷與高等教育溢酬</title>
+    <title>淡江大學《AI與經濟研究報告》專題規劃 - 主題一</title>
     <style>
-        @page { margin: 0; }
-        *, *::before, *::after { box-sizing: border-box; }
-        html, body { margin: 0; padding: 0; }
-        html { background-color: #f4f6f9; }
-        @media (prefers-color-scheme: dark) {
-            html { background-color: #1f1f1f; }
-        }
-        body { 
-            padding: 24px 0;
-            margin: 0 auto;
-            max-width: 900px !important;
-            border: none !important;
-            background: transparent !important; 
-            font-family: 'Noto Sans TC', 'Microsoft JhengHei', sans-serif;
-            color: #2c3e50;
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
             line-height: 1.6;
-        }
-        .page {
-            height: 297mm;
-            margin: 0 auto 12px auto;
-            padding: 18mm 18mm 12mm 18mm;
-            background-color: #ffffff;
-            border: 1px solid rgba(0, 0, 0, 0.12);
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            position: relative;
-            overflow: hidden;
-        }
-        @media screen and (max-width: 600px) {
-            body { padding: 16px 0; }
-            .page { margin: 0 auto 8px auto; border: none; padding: 12px 20px; height: auto; min-height: 297mm; }
-        }
-        .page-content {
-            flex: 1 1 0;
-            min-height: 0;
-            overflow: hidden;
-        }
-        .page-footer {
-            flex-shrink: 0;
-            margin-top: auto;
-            padding-top: 4mm;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 8.5pt;
-            color: #64748b;
-            border-top: 1px solid #e2e8f0;
-        }
-        @media print {
-            *, *::before, *::after {
-                box-shadow: none !important;
-                text-shadow: none !important;
-                -webkit-print-color-adjust: exact;
-                print-color-adjust: exact;
-            }
-            body { padding: 0; background: none; }
-            .page {
-                margin: 0;
-                border: none;
-                height: 297mm;
-                break-after: page;
-                page-break-after: always;
-            }
-            .page:last-child { break-after: auto; page-break-after: auto; }
-        }
-        [contenteditable]:focus { outline: none; }
-        /* Document Design Styles */
-        .header-banner {
-            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
-            color: #ffffff;
-            padding: 20px 24px;
-            border-radius: 6px;
-            margin-bottom: 20px;
-        }
-        .header-banner h1 {
-            font-size: 18pt;
-            margin: 0 0 6px 0;
-            font-weight: 700;
-            letter-spacing: 0.5px;
-        }
-        .header-banner .subtitle {
-            font-size: 10.5pt;
-            opacity: 0.9;
+            color: #333333;
+            background-color: #f8f9fa;
             margin: 0;
-            font-weight: 400;
+            padding: 20px;
         }
-        .meta-info {
-            display: flex;
-            justify-content: space-between;
-            font-size: 9.5pt;
-            background: #f8fafc;
-            padding: 8px 12px;
-            border-radius: 4px;
-            margin-bottom: 16px;
-            border: 1px solid #e2e8f0;
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
         }
-        .section-title {
-            font-size: 13pt;
-            font-weight: 700;
-            color: #1e3a8a;
-            border-left: 4px solid #3b82f6;
-            padding-left: 10px;
-            margin: 16px 0 10px 0;
-        }
-        .card {
-            background: #f8fafc;
-            border: 1px solid #e2e8f0;
-            border-radius: 6px;
-            padding: 14px 16px;
-            margin-bottom: 12px;
-        }
-        .card-title {
-            font-weight: 700;
-            font-size: 11pt;
-            color: #0f172a;
-            margin-bottom: 6px;
-        }
-        .hypothesis-box {
-            background: #eff6ff;
-            border-left: 4px solid #2563eb;
-            padding: 10px 14px;
-            margin: 8px 0;
-            font-size: 10pt;
-            border-radius: 0 4px 4px 0;
-        }
-        .grid-2 {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 12px;
-            margin-top: 10px;
-        }
-        .badge {
-            display: inline-block;
-            background: #dbeafe;
-            color: #1e40af;
-            font-size: 8.5pt;
-            font-weight: 600;
-            padding: 2px 8px;
-            border-radius: 12px;
-            margin-right: 6px;
+        h1 {
+            color: #2c3e50;
+            font-size: 1.75rem;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 12px;
+            margin-top: 0;
         }
         p {
-            margin: 6px 0;
-            font-size: 10pt;
+            margin-bottom: 20px;
+            color: #555555;
         }
-        ul {
-            margin: 6px 0;
-            padding-left: 20px;
-            font-size: 10pt;
+        .topic-card {
+            background: #f1f8ff;
+            border-left: 4px solid #0366d6;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 0 6px 6px 0;
         }
-        li {
-            margin-bottom: 4px;
+        .topic-card.primary {
+            background: #e6f4ea;
+            border-left-color: #34a853;
+        }
+        .topic-label {
+            font-weight: bold;
+            color: #1a73e8;
+            font-size: 1.05rem;
+            margin-bottom: 8px;
+        }
+        .topic-card.primary .topic-label {
+            color: #137333;
+        }
+        .topic-title {
+            font-size: 1.15rem;
+            color: #202124;
+            font-weight: 600;
+        }
+        .footer-note {
+            margin-top: 30px;
+            font-size: 0.9rem;
+            color: #7f8c8d;
+            text-align: center;
+            border-top: 1px solid #eee;
+            padding-top: 15px;
         }
     </style>
 </head>
 <body>
-<div contenteditable="true">
-    <!-- Page 1 -->
-    <section class="page">
-        <div class="page-content">
-            <div class="header-banner">
-                <h1>AI與經濟研究報告專題</h1>
-                <p class="subtitle">淡江大學經濟學系學術專題規畫書</p>
-            </div>
-            <div class="meta-info">
-                <span><strong>核心資料庫：</strong>台灣 AREMOS 資料庫 (net.aremos.org.tw)</span>
-                <span><strong>研究主題：</strong>教育程度薪資與經常性薪資</span>
-            </div>
-
-            <div class="section-title">1. 創新型研究題目設計</div>
-            <div class="card">
-                <div class="card-title">📌 核心研究題目</div>
-                <p style="font-size: 11pt; font-weight: bold; color: #1e40af;">技能偏向型技術變遷（SBTC）下的高等教育溢酬：基於 AREMOS 資料庫之動態實證分析</p>
-                <p style="margin-top: 8px; font-size: 9.5pt; color: #475569;">
-                    <strong>學術價值：</strong>本研究結合勞動經濟學經典之「技能偏向型技術變遷（SBTC）」理論，透過台灣總體時序資料，量化分析在生成式 AI 與數位化資本深化浪潮下，不同教育程度勞動者（研究所、大專、高中以下）經常性薪資的結構性變化與差距演進。
-                </p>
-            </div>
-
-            <div class="section-title">2. 研究假說 (Hypothesis)</div>
-            <div class="hypothesis-box">
-                <strong>H<sub>1</sub> 假說（高等教育溢酬擴大）：</strong>
-                隨著 AI 與自動化技術資本累積深化，研究所與大專學歷勞動者的「教育溢酬（Education Premium）」呈現顯著擴大趨勢，高階認知勞動的邊際生產力大幅上升。
-            </div>
-            <div class="hypothesis-box">
-                <strong>H<sub>2</sub> 假說（中低學歷薪資停滯）：</strong>
-                高中以下教育程度勞動者的經常性薪資成長率，易受例行性任務之技術替代效應影響而出現相對停滯或增幅放緩。
-            </div>
+    <div class="container">
+        <h1>一、 具創新性與學術規範的專題研究題目</h1>
+        <p>為了突顯 AI 技術衝擊與教育程度的關聯性，結合台灣 AREMOS 資料庫的總體經濟指標，以下提供兩個兼具實證可行性與學術價值的推薦題目：</p>
+        
+        <div class="topic-card primary">
+            <div class="topic-label">題目一（核心推薦）：</div>
+            <div class="topic-title">《技能偏向型技術變遷還是AI替代？台灣勞動市場教育程度與經常性薪資的動態結構變遷分析》</div>
         </div>
-        <footer class="page-footer">
-            <span>淡江大學《AI與經濟研究報告》</span>
-            <span>Page 1 of 2</span>
-        </footer>
-    </section>
 
-    <!-- Page 2 -->
-    <section class="page">
-        <div class="page-content">
-            <div class="section-title">2. 經濟學理傳導機制 (Mechanism)</div>
-            <div class="card">
-                <div class="card-title">🔄 理論傳導路徑分析</div>
-                <ul>
-                    <li><span class="badge">傳導機制一</span><strong>技能偏向型技術變遷（SBTC）：</strong>AI 與先進數位資本屬於非 rutin（非例行性）認知工作的互補品，能大幅提升高教人才的邊際生產力，帶動其勞動需求曲線右移，進而推升經常性薪資水準。</li>
-                    <li><span class="badge">傳導機制二</span><strong>替代效應與互補效應：</strong>中低教育程度勞動者多從事例行性、規則性任務（Routine Tasks），較易遭 AI 與自動化設備替代，導致其勞動市場議價能力減弱，拉大不同教育程度間的薪資鴻溝。</li>
-                </ul>
-            </div>
-
-            <div class="section-title">3. 建議採用的數據視覺化圖表</div>
-            
-            <div class="grid-2">
-                <div class="card" style="margin-bottom: 0;">
-                    <div class="card-title">📈 雙 Y 軸折線圖</div>
-                    <p style="font-size: 9.5pt;"><strong>設計邏輯：</strong>左軸呈現「研究所、大專、高中經常性薪資絕對水準」，右軸呈現「高教溢酬比率（大專/高中薪資比）」。</p>
-                    <p style="font-size: 9.5pt; color: #475569; margin-top: 4px;">直觀對比長期薪資絕對差距與相對溢酬的結構性變化軌跡。</p>
-                </div>
-
-                <div class="card" style="margin-bottom: 0;">
-                    <div class="card-title">📊 熱力圖 (Heatmap)</div>
-                    <p style="font-size: 9.5pt;"><strong>設計邏輯：</strong>以橫軸為年份、縱軸為教育程度別，顏色深淺代表「經常性薪資年增率 (%)」。</p>
-                    <p style="font-size: 9.5pt; color: #475569; margin-top: 4px;">迅速看出不同學歷群體在景氣循環與科技衝擊下的受惠時序與落差。</p>
-                </div>
-            </div>
-
-            <div class="card" style="margin-top: 12px;">
-                <div class="card-title">📉 脈衝衝擊圖 (IRF - Impulse Response Function)</div>
-                <p style="font-size: 9.5pt;"><strong>計量模型應用：</strong>若專題後續採用時間序列向量自我迴歸模型（VAR），可繪製技術衝擊（如軟體投資或研發資本變動）下，各教育程度經常性薪資的動態反應軌跡與收斂特性。</p>
-            </div>
+        <div class="topic-card">
+            <div class="topic-label">題目二：</div>
+            <div class="topic-title">《生成式AI浪潮下的教育回報率極化現象：基於台灣AREMOS總體資料庫的實證檢定》</div>
         </div>
-        <footer class="page-footer">
-            <span>淡江大學《AI與經濟研究報告》</span>
-            <span>Page 2 of 2</span>
-        </footer>
-    </section>
-</div>
+
+        <div class="footer-note">
+            淡江大學《AI與經濟研究報告》專題規劃
+        </div>
+    </div>
 </body>
 </html>
